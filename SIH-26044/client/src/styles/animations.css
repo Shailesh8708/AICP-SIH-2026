@@ -1,0 +1,384 @@
+/* =========================================================================
+   AICP ENHANCED VISUAL & INTERACTIVE ANIMATIONS
+   Preserves 100% of existing palette, typography, layout, and components.
+   Adds modern, subtle, GPU-accelerated micro-interactions and animations.
+   ========================================================================= */
+
+/* ── 1. Page Load & Hero Staggered Entrance ── */
+@keyframes aicpFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aicpFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes aicpFloatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes aicpAmbientGlowPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes aicpHighlightShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hero Stagger Classes */
+.hero-stagger-1 {
+  animation: aicpFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s backwards;
+}
+
+.hero-stagger-2 {
+  animation: aicpFadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.18s backwards;
+}
+
+.hero-stagger-3 {
+  animation: aicpFadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards;
+}
+
+.hero-stagger-4 {
+  animation: aicpFadeInUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.42s backwards;
+}
+
+.hero-stagger-5 {
+  animation: aicpFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.54s backwards;
+}
+
+.hero-stagger-preview {
+  animation: aicpFadeInUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.28s backwards;
+}
+
+/* Ambient Backdrop Breathing */
+.warm-ambient-glow {
+  animation: aicpAmbientGlowPulse 8s infinite ease-in-out;
+  will-change: transform, opacity;
+}
+
+/* Subtle Headline Shimmer (uses existing gradient) */
+.warm-highlight-text {
+  background-size: 200% 200% !important;
+  animation: aicpHighlightShimmer 6s infinite ease-in-out;
+}
+
+/* ── 2. Career Acceleration Pipeline Visual Flow ── */
+@keyframes aicpPipelineStepPulse {
+  0%, 100% {
+    border-color: #e8e2d8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transform: translateY(0);
+  }
+  50% {
+    border-color: #f59e0b;
+    box-shadow: 0 6px 16px -2px rgba(245, 158, 11, 0.28);
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes aicpIconGlow {
+  0%, 100% {
+    background: #fef3c7;
+    color: #d97706;
+    transform: scale(1);
+  }
+  50% {
+    background: #fde68a;
+    color: #b45309;
+    transform: scale(1.08);
+  }
+}
+
+/* Cascade active beam across the 5 nodes in sequence */
+.warm-pipeline-track .warm-node {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  will-change: transform, box-shadow;
+  position: relative;
+}
+
+.warm-pipeline-track .warm-node:hover {
+  transform: translateY(-4px) !important;
+  border-color: #f59e0b !important;
+  box-shadow: 0 10px 22px -3px rgba(217, 119, 6, 0.25) !important;
+}
+
+.warm-pipeline-track .warm-node.node-0 {
+  animation: aicpPipelineStepPulse 5s infinite ease-in-out 0s;
+}
+.warm-pipeline-track .warm-node.node-1 {
+  animation: aicpPipelineStepPulse 5s infinite ease-in-out 1s;
+}
+.warm-pipeline-track .warm-node.node-2 {
+  animation: aicpPipelineStepPulse 5s infinite ease-in-out 2s;
+}
+.warm-pipeline-track .warm-node.node-3 {
+  animation: aicpPipelineStepPulse 5s infinite ease-in-out 3s;
+}
+.warm-pipeline-track .warm-node.node-4 {
+  animation: aicpPipelineStepPulse 5s infinite ease-in-out 4s;
+}
+
+.warm-pipeline-track .warm-node.node-0 .warm-icon-shell {
+  animation: aicpIconGlow 5s infinite ease-in-out 0s;
+}
+.warm-pipeline-track .warm-node.node-1 .warm-icon-shell {
+  animation: aicpIconGlow 5s infinite ease-in-out 1s;
+}
+.warm-pipeline-track .warm-node.node-2 .warm-icon-shell {
+  animation: aicpIconGlow 5s infinite ease-in-out 2s;
+}
+.warm-pipeline-track .warm-node.node-3 .warm-icon-shell {
+  animation: aicpIconGlow 5s infinite ease-in-out 3s;
+}
+.warm-pipeline-track .warm-node.node-4 .warm-icon-shell {
+  animation: aicpIconGlow 5s infinite ease-in-out 4s;
+}
+
+/* Subtle floating for the pipeline preview cards */
+.warm-pipeline-preview {
+  animation: aicpFloatGentle 6s infinite ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.warm-pipeline-preview:hover {
+  animation-play-state: paused;
+}
+
+/* ── 3. Button Micro-Interactions ── */
+.aicp-button,
+.warm-btn-primary,
+.warm-btn-outline,
+.warm-btn-subtle,
+.feature-link-btn,
+.ai-feature-cta {
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+              background 0.2s ease,
+              border-color 0.2s ease,
+              color 0.2s ease !important;
+  will-change: transform, box-shadow;
+}
+
+.aicp-button:hover:not(:disabled),
+.warm-btn-primary:hover:not(:disabled),
+.hero-cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -2px rgba(234, 88, 12, 0.35) !important;
+}
+
+.warm-btn-outline:hover:not(:disabled),
+.hero-cta-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -2px rgba(217, 119, 6, 0.16) !important;
+}
+
+.aicp-button:active:not(:disabled),
+.warm-btn-primary:active,
+.warm-btn-outline:active {
+  transform: translateY(0) scale(0.98) !important;
+}
+
+/* Smooth arrow movement on button hover */
+.aicp-button svg,
+.warm-btn-primary svg,
+.warm-btn-outline svg,
+.hero-actions a svg,
+.hero-actions button svg,
+.feature-link-btn svg,
+.ai-feature-cta svg,
+.role-card-link svg {
+  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.aicp-button:hover svg,
+.warm-btn-primary:hover svg,
+.hero-cta-primary:hover svg,
+.feature-link-btn:hover svg,
+.ai-feature-cta:hover svg,
+.role-card-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── 4. Card Micro-Interactions (Elevation, Shadow, Icon Scale) ── */
+.warm-feature-item,
+.warm-opp-card,
+.warm-ai-card,
+.warm-role-card,
+.warm-journey-step,
+.warm-stat-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+.warm-feature-item:hover,
+.warm-opp-card:hover,
+.warm-ai-card:hover,
+.warm-role-card:hover,
+.warm-journey-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px -6px rgba(217, 119, 6, 0.14), 0 4px 10px rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(245, 158, 11, 0.45) !important;
+}
+
+/* Sub-card icon subtle scale/rotation on hover */
+.warm-feature-icon,
+.warm-ai-icon,
+.warm-role-icon,
+.warm-step-icon,
+.opp-avatar {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.warm-feature-item:hover .warm-feature-icon,
+.warm-ai-card:hover .warm-ai-icon,
+.warm-role-card:hover .warm-role-icon,
+.warm-journey-step:hover .warm-step-icon,
+.warm-opp-card:hover .opp-avatar {
+  transform: scale(1.08) rotate(2deg);
+}
+
+/* Badge chips subtle hover lift */
+.warm-badge-chip,
+.warm-tier-badge,
+.warm-match-pill,
+.opp-skill-tag {
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.opp-skill-tag:hover {
+  transform: translateY(-1px);
+  background: #fef3c7 !important;
+  color: #92400e !important;
+}
+
+/* ── 5. Navigation Micro-Interactions ── */
+.site-nav {
+  animation: aicpFadeIn 0.5s ease 0s backwards;
+}
+
+.warm-nav-links .nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.warm-nav-links .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f59e0b, #ea580c);
+  transition: width 0.22s ease, left 0.22s ease;
+  border-radius: 2px;
+}
+
+.warm-nav-links .nav-link:hover::after,
+.warm-nav-links .nav-link.active::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* Beacon glow on live status */
+.warm-beacon,
+.warm-live-beacon {
+  box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  animation: aicpBeaconPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes aicpBeaconPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(245, 158, 11, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+  }
+}
+
+/* ── 6. Form Input Micro-Interactions ── */
+input, select, textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2) !important;
+}
+
+/* ── 7. Scroll-Triggered Reveal Animations ── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger reveals for children in grids */
+.reveal-stagger-parent.is-visible > *:nth-child(1) { transition-delay: 0.05s; }
+.reveal-stagger-parent.is-visible > *:nth-child(2) { transition-delay: 0.12s; }
+.reveal-stagger-parent.is-visible > *:nth-child(3) { transition-delay: 0.19s; }
+.reveal-stagger-parent.is-visible > *:nth-child(4) { transition-delay: 0.26s; }
+.reveal-stagger-parent.is-visible > *:nth-child(5) { transition-delay: 0.33s; }
+.reveal-stagger-parent.is-visible > *:nth-child(6) { transition-delay: 0.40s; }
+
+/* ── 8. Fast & Smooth Route/Page Transition ── */
+.page-route-enter {
+  animation: aicpFadeIn 0.2s ease-out;
+}
+
+/* ── 9. Accessibility: Respect prefers-reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

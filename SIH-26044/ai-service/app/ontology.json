@@ -1,0 +1,206 @@
+{
+  "version": "2.0.0",
+  "skills": {
+    "html": { "name": "HTML", "aliases": ["html5"], "prerequisites": [], "difficulty": "Beginner" },
+    "css": { "name": "CSS", "aliases": ["css3"], "prerequisites": ["HTML"], "difficulty": "Beginner" },
+    "javascript": { "name": "JavaScript", "aliases": ["js", "ecmascript"], "prerequisites": [], "difficulty": "Beginner" },
+    "typescript": { "name": "TypeScript", "aliases": ["ts"], "prerequisites": ["JavaScript"], "difficulty": "Intermediate" },
+    "react": { "name": "React", "aliases": ["reactjs", "react.js"], "prerequisites": ["JavaScript", "HTML", "CSS"], "difficulty": "Intermediate" },
+    "next.js": { "name": "Next.js", "aliases": ["nextjs", "next"], "prerequisites": ["React", "JavaScript"], "difficulty": "Intermediate" },
+    "tailwind css": { "name": "Tailwind CSS", "aliases": ["tailwind", "tailwindcss"], "prerequisites": ["CSS", "HTML"], "difficulty": "Beginner" },
+    "redux": { "name": "Redux", "aliases": ["redux toolkit", "rtk"], "prerequisites": ["React", "JavaScript"], "difficulty": "Intermediate" },
+    "node.js": { "name": "Node.js", "aliases": ["node", "nodejs"], "prerequisites": ["JavaScript"], "difficulty": "Intermediate" },
+    "express": { "name": "Express", "aliases": ["expressjs", "express.js"], "prerequisites": ["Node.js", "JavaScript"], "difficulty": "Intermediate" },
+    "rest apis": { "name": "REST APIs", "aliases": ["rest", "restful", "rest api", "restful apis", "api development"], "prerequisites": ["JavaScript"], "difficulty": "Intermediate" },
+    "sql": { "name": "SQL", "aliases": ["structured query language"], "prerequisites": [], "difficulty": "Beginner" },
+    "postgresql": { "name": "PostgreSQL", "aliases": ["postgres", "postgre"], "prerequisites": ["SQL"], "difficulty": "Intermediate" },
+    "mysql": { "name": "MySQL", "aliases": [], "prerequisites": ["SQL"], "difficulty": "Beginner" },
+    "mongodb": { "name": "MongoDB", "aliases": ["mongo"], "prerequisites": [], "difficulty": "Beginner" },
+    "redis": { "name": "Redis", "aliases": [], "prerequisites": ["Node.js"], "difficulty": "Intermediate" },
+    "microservices": { "name": "Microservices", "aliases": [], "prerequisites": ["REST APIs", "Docker"], "difficulty": "Advanced" },
+    "python": { "name": "Python", "aliases": ["py", "python3"], "prerequisites": [], "difficulty": "Beginner" },
+    "java": { "name": "Java", "aliases": ["core java"], "prerequisites": [], "difficulty": "Beginner" },
+    "spring boot": { "name": "Spring Boot", "aliases": ["spring", "springboot"], "prerequisites": ["Java"], "difficulty": "Intermediate" },
+    "data structures": { "name": "Data Structures", "aliases": ["dsa", "data structure"], "prerequisites": ["Python"], "difficulty": "Beginner" },
+    "algorithms": { "name": "Algorithms", "aliases": ["algo"], "prerequisites": ["Data Structures"], "difficulty": "Intermediate" },
+    "statistics": { "name": "Statistics", "aliases": ["stats", "probability"], "prerequisites": [], "difficulty": "Beginner" },
+    "pandas": { "name": "Pandas", "aliases": [], "prerequisites": ["Python"], "difficulty": "Beginner" },
+    "numpy": { "name": "NumPy", "aliases": [], "prerequisites": ["Python"], "difficulty": "Beginner" },
+    "data analysis": { "name": "Data Analysis", "aliases": ["data analytics"], "prerequisites": ["Python", "SQL"], "difficulty": "Beginner" },
+    "data visualization": { "name": "Data Visualization", "aliases": ["data viz", "visualization"], "prerequisites": ["Python", "Data Analysis"], "difficulty": "Beginner" },
+    "machine learning": { "name": "Machine Learning", "aliases": ["ml"], "prerequisites": ["Python", "Statistics", "Pandas", "NumPy"], "difficulty": "Intermediate" },
+    "scikit-learn": { "name": "Scikit-learn", "aliases": ["sklearn"], "prerequisites": ["Machine Learning", "Python"], "difficulty": "Intermediate" },
+    "model evaluation": { "name": "Model Evaluation", "aliases": [], "prerequisites": ["Machine Learning", "Statistics"], "difficulty": "Intermediate" },
+    "deep learning": { "name": "Deep Learning", "aliases": ["dl"], "prerequisites": ["Machine Learning", "Python", "Statistics"], "difficulty": "Advanced" },
+    "pytorch": { "name": "PyTorch", "aliases": ["torch"], "prerequisites": ["Deep Learning", "Python"], "difficulty": "Advanced" },
+    "power bi": { "name": "Power BI", "aliases": ["powerbi"], "prerequisites": ["Excel", "SQL"], "difficulty": "Intermediate" },
+    "excel": { "name": "Excel", "aliases": ["advanced excel"], "prerequisites": [], "difficulty": "Beginner" },
+    "linux": { "name": "Linux", "aliases": ["unix"], "prerequisites": [], "difficulty": "Beginner" },
+    "git": { "name": "Git", "aliases": ["github", "gitlab", "version control"], "prerequisites": [], "difficulty": "Beginner" },
+    "docker": { "name": "Docker", "aliases": ["containers"], "prerequisites": ["Linux"], "difficulty": "Intermediate" },
+    "kubernetes": { "name": "Kubernetes", "aliases": ["k8s"], "prerequisites": ["Docker", "Linux", "Networking"], "difficulty": "Advanced" },
+    "ci/cd": { "name": "CI/CD", "aliases": ["cicd", "continuous integration"], "prerequisites": ["Git"], "difficulty": "Intermediate" },
+    "aws": { "name": "AWS", "aliases": ["amazon web services", "aws cloud"], "prerequisites": ["Networking", "Linux"], "difficulty": "Intermediate" },
+    "networking": { "name": "Networking", "aliases": ["computer networks", "network protocols"], "prerequisites": [], "difficulty": "Beginner" },
+    "cybersecurity": { "name": "Cybersecurity", "aliases": ["cyber security", "infosec", "information security"], "prerequisites": ["Networking", "Linux"], "difficulty": "Intermediate" },
+    "network security": { "name": "Network Security", "aliases": [], "prerequisites": ["Networking"], "difficulty": "Intermediate" },
+    "information security": { "name": "Information Security", "aliases": ["infosec"], "prerequisites": ["Networking", "Linux"], "difficulty": "Intermediate" },
+    "ethical hacking": { "name": "Ethical Hacking", "aliases": ["white hat hacking"], "prerequisites": ["Networking", "Linux", "Cybersecurity"], "difficulty": "Advanced" },
+    "penetration testing": { "name": "Penetration Testing", "aliases": ["pen testing"], "prerequisites": ["Ethical Hacking", "Linux"], "difficulty": "Advanced" }
+  },
+  "careers": {
+    "Frontend Developer": {
+      "aliases": ["frontend", "front end", "front-end", "frontend developer", "frontend engineer", "react developer", "web frontend", "ui developer", "ui engineer"],
+      "core_skills": ["HTML", "CSS", "JavaScript", "React", "REST APIs", "Git"],
+      "secondary_skills": ["TypeScript", "Tailwind CSS", "Next.js", "Redux"],
+      "skills": ["HTML", "CSS", "JavaScript", "React", "REST APIs", "Git", "TypeScript", "Tailwind CSS", "Next.js", "Redux"],
+      "next": ["Full Stack Developer", "Frontend Architect", "Mobile Developer"]
+    },
+    "Backend Developer": {
+      "aliases": ["backend", "back end", "back-end", "backend developer", "backend engineer", "node developer", "api developer", "server developer", "server engineer"],
+      "core_skills": ["Node.js", "Express", "SQL", "REST APIs", "MongoDB", "Git"],
+      "secondary_skills": ["Docker", "Redis", "Microservices", "PostgreSQL", "CI/CD"],
+      "skills": ["Node.js", "Express", "SQL", "REST APIs", "MongoDB", "Git", "Docker", "Redis", "Microservices", "PostgreSQL", "CI/CD"],
+      "next": ["Full Stack Developer", "DevOps Engineer", "System Architect"]
+    },
+    "Full Stack Developer": {
+      "aliases": ["full stack", "fullstack", "full-stack", "full stack developer", "full stack engineer", "mern developer", "web developer"],
+      "core_skills": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB", "SQL", "REST APIs", "Git"],
+      "secondary_skills": ["TypeScript", "Docker", "Tailwind CSS", "Next.js", "CI/CD"],
+      "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB", "SQL", "REST APIs", "Git", "TypeScript", "Docker", "Tailwind CSS", "Next.js", "CI/CD"],
+      "next": ["Technical Lead", "Software Architect", "Engineering Manager"]
+    },
+    "Data Analyst": {
+      "aliases": ["data analyst", "data analytics", "bi analyst", "business intelligence analyst", "analytics consultant"],
+      "core_skills": ["Python", "SQL", "Excel", "Data Analysis", "Data Visualization", "Statistics"],
+      "secondary_skills": ["Power BI", "Pandas", "NumPy"],
+      "skills": ["Python", "SQL", "Excel", "Data Analysis", "Data Visualization", "Statistics", "Power BI", "Pandas", "NumPy"],
+      "next": ["Data Scientist", "BI Architect", "Data Engineer"]
+    },
+    "Data Scientist": {
+      "aliases": ["data scientist", "data science", "ds", "applied scientist"],
+      "core_skills": ["Python", "Statistics", "Pandas", "NumPy", "SQL", "Machine Learning", "Scikit-learn", "Model Evaluation", "Data Visualization"],
+      "secondary_skills": ["Deep Learning"],
+      "skills": ["Python", "Statistics", "Pandas", "NumPy", "SQL", "Machine Learning", "Scikit-learn", "Model Evaluation", "Data Visualization", "Deep Learning"],
+      "next": ["Machine Learning Engineer", "AI Research Scientist", "Head of Data Science"]
+    },
+    "Machine Learning Engineer": {
+      "aliases": ["ml engineer", "machine learning engineer", "ai engineer", "ai/ml engineer", "artificial intelligence engineer", "deep learning engineer", "ai developer"],
+      "core_skills": ["Python", "Machine Learning", "Deep Learning", "PyTorch", "Scikit-learn", "Model Evaluation", "Git"],
+      "secondary_skills": ["Docker", "Data Analysis"],
+      "skills": ["Python", "Machine Learning", "Deep Learning", "PyTorch", "Scikit-learn", "Model Evaluation", "Git", "Docker", "Data Analysis"],
+      "next": ["AI Solutions Architect", "ML Infrastructure Lead", "AI Research Scientist"]
+    },
+    "Cloud Engineer": {
+      "aliases": ["cloud engineer", "cloud architect", "aws engineer", "azure engineer", "cloud solutions architect"],
+      "core_skills": ["AWS", "Linux", "Docker", "Networking", "Git"],
+      "secondary_skills": ["Kubernetes", "CI/CD"],
+      "skills": ["AWS", "Linux", "Docker", "Networking", "Git", "Kubernetes", "CI/CD"],
+      "next": ["DevOps Engineer", "Cloud Architect", "Site Reliability Engineer"]
+    },
+    "DevOps Engineer": {
+      "aliases": ["devops", "devops engineer", "sre", "site reliability engineer", "platform engineer"],
+      "core_skills": ["Linux", "Git", "Docker", "CI/CD", "AWS", "Python"],
+      "secondary_skills": ["Kubernetes"],
+      "skills": ["Linux", "Git", "Docker", "CI/CD", "AWS", "Python", "Kubernetes"],
+      "next": ["Cloud Architect", "Principal SRE", "Platform Director"]
+    },
+    "Cybersecurity Analyst": {
+      "aliases": ["cybersecurity", "cyber security", "cybersecurity analyst", "infosec", "information security specialist", "soc analyst", "ethical hacker"],
+      "core_skills": ["Networking", "Linux", "Cybersecurity", "Network Security", "Information Security", "Python"],
+      "secondary_skills": ["Ethical Hacking", "Penetration Testing"],
+      "skills": ["Networking", "Linux", "Cybersecurity", "Network Security", "Information Security", "Python", "Ethical Hacking", "Penetration Testing"],
+      "next": ["Security Architect", "Chief Information Security Officer (CISO)", "Penetration Tester"]
+    },
+    "Software Developer": {
+      "aliases": ["software developer", "software engineer", "swe", "sde", "programmer", "application developer"],
+      "core_skills": ["Data Structures", "Algorithms", "JavaScript", "Python", "SQL", "Git"],
+      "secondary_skills": ["REST APIs", "Docker", "CI/CD"],
+      "skills": ["Data Structures", "Algorithms", "JavaScript", "Python", "SQL", "Git", "REST APIs", "Docker", "CI/CD"],
+      "next": ["Senior Software Engineer", "System Architect", "Tech Lead"]
+    }
+  },
+  "company_programs": [
+    {
+      "id": "ibm-skillsbuild",
+      "provider": "IBM",
+      "program_name": "IBM SkillsBuild - AI, Cloud & Emerging Tech Track",
+      "category": "ai",
+      "skills": ["Python", "Machine Learning", "Data Analysis", "Cybersecurity", "Linux", "SQL"],
+      "badge_label": "Free Digital Badges (Credly)",
+      "official_url": "https://skillsbuild.org/"
+    },
+    {
+      "id": "cisco-netacad",
+      "provider": "Cisco Systems",
+      "program_name": "Cisco Networking Academy - Network & Cyber Operations Track",
+      "category": "cyber",
+      "skills": ["Networking", "Cybersecurity", "Network Security", "Python", "Linux", "Information Security"],
+      "badge_label": "Verifiable Cisco Badges",
+      "official_url": "https://www.netacad.com/"
+    },
+    {
+      "id": "microsoft-learn",
+      "provider": "Microsoft",
+      "program_name": "Microsoft Learn - Azure Cloud & Software Engineering Paths",
+      "category": "cloud",
+      "skills": ["AWS", "Git", "CI/CD", "Docker", "SQL"],
+      "badge_label": "Free Trophies / Exam Badges",
+      "official_url": "https://learn.microsoft.com/"
+    },
+    {
+      "id": "aws-skill-builder",
+      "provider": "Amazon Web Services",
+      "program_name": "AWS Skill Builder - Cloud Architecture & Serverless Track",
+      "category": "cloud",
+      "skills": ["AWS", "Docker", "Linux", "Networking", "Cybersecurity"],
+      "badge_label": "AWS Digital Badges",
+      "official_url": "https://explore.skillbuilder.aws/"
+    },
+    {
+      "id": "google-cloud-skills-boost",
+      "provider": "Google Cloud",
+      "program_name": "Google Cloud Skills Boost - Cloud Engineering & Big Data Track",
+      "category": "cloud",
+      "skills": ["Kubernetes", "Docker", "Linux", "SQL", "Data Analysis", "Machine Learning"],
+      "badge_label": "Google Cloud Skill Badges",
+      "official_url": "https://www.cloudskillsboost.google/"
+    },
+    {
+      "id": "nvidia-dli",
+      "provider": "NVIDIA",
+      "program_name": "NVIDIA Deep Learning Institute - Accelerated Computing & GenAI",
+      "category": "ai",
+      "skills": ["Deep Learning", "PyTorch", "Machine Learning", "Python", "Model Evaluation"],
+      "badge_label": "Certificate of Competency",
+      "official_url": "https://www.nvidia.com/en-us/training/"
+    },
+    {
+      "id": "github-skills",
+      "provider": "GitHub",
+      "program_name": "GitHub Skills - Version Control, CI/CD & Open Source Workflows",
+      "category": "tech",
+      "skills": ["Git", "CI/CD", "HTML"],
+      "badge_label": "100% Free GitHub Badges",
+      "official_url": "https://skills.github.com/"
+    },
+    {
+      "id": "infosys-springboard",
+      "provider": "Infosys",
+      "program_name": "Infosys Springboard - Full Stack & Enterprise Software Track",
+      "category": "tech",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "HTML", "CSS", "REST APIs", "Java", "Spring Boot", "SQL", "Python"],
+      "badge_label": "Free Infosys Certificates",
+      "official_url": "https://infyspringboard.onwingspan.com/"
+    },
+    {
+      "id": "coursera",
+      "provider": "Coursera & Industry Partners",
+      "program_name": "Coursera Professional Specializations - Web, Data & Software",
+      "category": "tech",
+      "skills": ["React", "Node.js", "HTML", "CSS", "REST APIs", "Data Structures", "Algorithms", "Machine Learning", "Pandas", "NumPy", "Statistics"],
+      "badge_label": "Audit Free / Verified Cert",
+      "official_url": "https://www.coursera.org/"
+    }
+  ]
+}

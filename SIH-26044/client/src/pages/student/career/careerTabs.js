@@ -1,0 +1,38 @@
+import {
+  BrainCircuit,
+  GitBranch,
+  Briefcase,
+  FileSearch,
+  FileText,
+  MessageSquare,
+  Lightbulb,
+  Map,
+  LayoutDashboard,
+  BarChart3,
+  Copy,
+  Github,
+  Linkedin,
+  Star,
+  UserCog,
+
+  GraduationCap,
+} from 'lucide-react'
+
+export const CAREER_TABS = [
+  { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { id: 'interview', label: 'AI Interview', icon: BrainCircuit },
+  { id: 'profile-editor', label: 'My Profile', icon: UserCog },
+  { id: 'analyze', label: 'Profile Score', icon: BarChart3 },
+  { id: 'career-rec', label: 'Career Paths', icon: Star },
+  { id: 'skill-gap', label: 'Skill Gap', icon: GitBranch },
+  { id: 'internship-match', label: 'Internship Match', icon: Briefcase },
+  { id: 'job-match', label: 'JD Analyzer', icon: FileSearch },
+  { id: 'resume', label: 'ATS Resume', icon: FileText },
+  { id: 'multi-resume', label: 'Multi Resume', icon: Copy },
+  { id: 'projects', label: 'Project Ideas', icon: Lightbulb },
+  { id: 'roadmap', label: 'Roadmap', icon: Map },
+  { id: 'mock-interview', label: 'Mock Interview', icon: MessageSquare },
+  { id: 'gain-skills', label: 'Gain Skills & Certificates', icon: GraduationCap },
+  { id: 'github', label: 'GitHub', icon: Github },
+  { id: 'linkedin', label: 'LinkedIn', icon: Linkedin },
+]

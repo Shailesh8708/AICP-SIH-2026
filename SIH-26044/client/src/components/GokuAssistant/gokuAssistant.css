@@ -1,0 +1,527 @@
+/* =========================================================================
+   GOKU AI ASSISTANT & VIRTUAL GUIDE STYLES
+   ========================================================================= */
+
+/* Floating Launcher Container */
+.goku-floating-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  animation: goku-idle-float 4s infinite ease-in-out;
+}
+
+@keyframes goku-idle-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Floating Avatar Button */
+.goku-trigger-btn {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f59e0b, #ea580c, #d97706);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px -4px rgba(234, 88, 12, 0.4), 0 4px 12px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+  outline: none;
+}
+
+.goku-trigger-btn:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 14px 28px -4px rgba(234, 88, 12, 0.55), 0 6px 16px rgba(0, 0, 0, 0.16);
+}
+
+.goku-trigger-btn:active {
+  transform: translateY(0) scale(0.96);
+}
+
+/* Aura Ring Animation */
+.goku-aura-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(245, 158, 11, 0.4);
+  animation: goku-ring-pulse 2.2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes goku-ring-pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0.2; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Welcome Speech Bubble on First Load */
+.goku-welcome-bubble {
+  position: absolute;
+  bottom: 74px;
+  right: 0;
+  width: 290px;
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-shadow: 0 12px 32px -4px rgba(217, 119, 6, 0.2), 0 4px 12px rgba(0, 0, 0, 0.08);
+  animation: goku-pop-up 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform-origin: bottom right;
+}
+
+@keyframes goku-pop-up {
+  from { opacity: 0; transform: translateY(12px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.goku-welcome-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 24px;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-right: 1px solid #fed7aa;
+  border-bottom: 1px solid #fed7aa;
+  transform: rotate(45deg);
+}
+
+.goku-welcome-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.goku-welcome-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #b45309;
+  background: #fef3c7;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #fde68a;
+}
+
+.goku-welcome-close {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goku-welcome-close:hover {
+  color: #374151;
+  background: #f3f4f6;
+}
+
+.goku-welcome-text {
+  font-size: 13px;
+  color: #1f2937;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.goku-welcome-cta {
+  font-size: 12px;
+  font-weight: 700;
+  color: #d97706;
+  background: #fffbeb;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.goku-welcome-cta:hover {
+  background: #fef3c7;
+  color: #b45309;
+  transform: translateY(-1px);
+}
+
+/* Chat Modal Panel */
+.goku-chat-panel {
+  position: absolute;
+  bottom: 74px;
+  right: 0;
+  width: 400px;
+  max-width: calc(100vw - 32px);
+  height: 580px;
+  max-height: calc(100vh - 110px);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 20px 48px -8px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(217, 119, 6, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: goku-panel-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom right;
+}
+
+@keyframes goku-panel-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Chat Header */
+.goku-header {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #181c24, #0f1219);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.goku-header-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.goku-header-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.goku-header-title h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.goku-header-title span {
+  font-size: 11px;
+  color: #fbbf24;
+  font-weight: 500;
+}
+
+.goku-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.goku-icon-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  padding: 5px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goku-icon-btn:hover {
+  background: rgba(245, 158, 11, 0.25);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+/* Message Feed */
+.goku-messages-feed {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #faf8f5;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+.goku-messages-feed::-webkit-scrollbar {
+  width: 5px;
+}
+.goku-messages-feed::-webkit-scrollbar-thumb {
+  background: #e2d9cc;
+  border-radius: 999px;
+}
+
+/* User Message */
+.goku-msg-user {
+  align-self: flex-end;
+  max-width: 82%;
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 16px 16px 3px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.2);
+  word-break: break-word;
+  animation: aicpFadeInUp 0.24s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* Assistant Message */
+.goku-msg-assistant {
+  align-self: flex-start;
+  max-width: 88%;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  animation: aicpFadeInUp 0.28s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.goku-msg-card {
+  background: #ffffff;
+  border: 1px solid #e8e2d8;
+  border-radius: 3px 16px 16px 16px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  font-size: 13px;
+  color: #1f2937;
+  line-height: 1.45;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Redirect Countdown Box */
+.goku-redirect-box {
+  background: #fffbeb;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.goku-redirect-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: #b45309;
+}
+
+.goku-progress-track {
+  height: 4px;
+  background: #fde68a;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.goku-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #ea580c);
+  transition: width 0.1s linear;
+}
+
+.goku-redirect-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.goku-btn-go {
+  font-size: 11px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  color: #ffffff;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.goku-btn-go:hover {
+  opacity: 0.92;
+}
+
+.goku-btn-cancel {
+  font-size: 11px;
+  font-weight: 600;
+  background: transparent;
+  color: #78716c;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.goku-btn-cancel:hover {
+  color: #292524;
+  text-decoration: underline;
+}
+
+/* Typing Indicator */
+.goku-typing {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 6px 10px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.goku-dot {
+  width: 6px;
+  height: 6px;
+  background: #f59e0b;
+  border-radius: 50%;
+  animation: goku-wave 1.1s infinite ease-in-out;
+}
+
+.goku-dot:nth-child(2) { animation-delay: 0.18s; }
+.goku-dot:nth-child(3) { animation-delay: 0.36s; }
+
+@keyframes goku-wave {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* Suggestions & Chips */
+.goku-chips-scroll {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 8px 14px;
+  background: #ffffff;
+  border-top: 1px solid #f0ebe1;
+}
+
+.goku-chips-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.goku-chip {
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 600;
+  color: #78350f;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.goku-chip:hover {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #f59e0b;
+  transform: translateY(-1px);
+}
+
+/* Input Area */
+.goku-input-container {
+  padding: 10px 14px;
+  background: #ffffff;
+  border-top: 1px solid #e8e2d8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.goku-input-box {
+  flex: 1;
+  border: 1px solid #d5ccc0;
+  background: #fdfbf7;
+  border-radius: 12px;
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #1f2937;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.goku-input-box:focus {
+  border-color: #f59e0b;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.goku-send-btn {
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  border: none;
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  flex-shrink: 0;
+}
+
+.goku-send-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.goku-send-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .goku-floating-container {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .goku-chat-panel {
+    width: calc(100vw - 32px);
+    height: 80vh;
+    max-height: 520px;
+    bottom: 72px;
+    right: 0;
+  }
+}
+

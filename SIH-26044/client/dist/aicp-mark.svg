@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#204d80" />
+      <stop offset="40%" stop-color="#163c68" />
+      <stop offset="100%" stop-color="#0a223f" />
+    </linearGradient>
+    <radialGradient id="specularGlow" cx="20%" cy="18%" r="65%">
+      <stop offset="0%" stop-color="#4288d0" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#1c4e85" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0a223f" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background squircle with continuous curvature -->
+  <rect width="280" height="280" rx="62" ry="62" fill="url(#bgGrad)" />
+  <rect width="280" height="280" rx="62" ry="62" fill="url(#specularGlow)" />
+
+  <!-- Central needle dividing line -->
+  <line x1="137.5" y1="68" x2="137.5" y2="206" stroke="#091a2e" stroke-width="1.4" stroke-linecap="round" opacity="0.9" />
+
+  <!-- Left Leg: Indian Saffron -->
+  <polygon points="137.5,75 137.5,123 93,204 58,204" fill="#f57c1f" />
+
+  <!-- Right Leg: Indian Green -->
+  <polygon points="137.5,75 137.5,123 182,204 217,204" fill="#2e965b" />
+
+  <!-- Pendulum string and bob -->
+  <line x1="227" y1="147" x2="234" y2="196" stroke="#f57c1f" stroke-width="4.2" stroke-linecap="round" />
+  <circle cx="234" cy="200" r="8" fill="#f57c1f" />
+
+  <!-- Horizontal White Crossbar -->
+  <rect x="44" y="141" width="187" height="15" rx="7.5" fill="#ffffff" />
+</svg>

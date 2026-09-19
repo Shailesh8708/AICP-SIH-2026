@@ -1,0 +1,36 @@
+{
+  "name": "aicp",
+  "version": "1.0.0",
+  "description": "AICP - Academia-Industry Collaboration Portal with Local MERN + Own AI/ML System",
+  "main": "server/src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/startAll.js",
+    "dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run dev\" \"cd ai-service && py app.py\"",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install && cd ../ai-service && pip install -r requirements.txt",
+    "seed": "node scripts/seedData.js",
+    "test": "concurrently \"npm test --prefix client -- --run\" \"npm test --prefix server -- --run\"",
+    "train-ai": "cd ai-training && python preprocessing/prepare_data.py && python training/train_skill_classifier.py",
+    "eval-ai": "cd ai-training && python evaluation/evaluate_models.py",
+    "format": "prettier --write .",
+    "lint": "concurrently \"npm run lint --prefix client\" \"npm run lint --prefix server\""
+  },
+  "keywords": [
+    "MERN",
+    "Machine Learning",
+    "AI",
+    "OTP Authentication",
+    "Academia",
+    "Industry",
+    "Collaboration",
+    "Skill Assessment",
+    "Career Guidance"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "prettier": "^3.0.0"
+  }
+}
